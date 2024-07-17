@@ -14,9 +14,9 @@ namespace MostUsedWords
             {
                 string[] lines = File.ReadAllLines(filePath);
                 string text = string.Join(" ", lines);
-                // Разделители слов(пробелы, запятые, точки и т.д.)
+
                 char[] separators = { ' ', ',', '.', ';', ':', '!', '?', '-', '–' };
-                // Разбиваем текст на слова с использованием разделителей
+
                 string[] words = text.Split(separators, StringSplitOptions.RemoveEmptyEntries);
                 words = words.Select(w => w.ToLower()).ToArray();
 
